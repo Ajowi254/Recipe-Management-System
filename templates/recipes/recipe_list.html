@@ -1,12 +1,14 @@
-
-    <h2>Recipes</h2>
-    <form method="get">
-        <input type="text" name="search" placeholder="Search recipes...">
-        <button type="submit">Search</button>
-    </form>
-    <ul>
-   
-        
-        <li>No recipes yet.</li>
-   
-    </ul>
+<h2>Recipes</h2>
+<form method="get">
+    <input type="text" name="search" placeholder="Search recipes...">
+    <button type="submit">Search</button>
+</form>
+<ul>
+{% for recipe in object_list %}
+    <li>
+        <a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.title }}</a>
+    </li>
+{% empty %}
+    <li>No recipes yet.</li>
+{% endfor %}
+</ul>
