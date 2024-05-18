@@ -9,7 +9,7 @@ Django==4.2.13
 Flask==2.0.2
 Flask-Mail==0.9.1
 Flask-Session==0.4.0
-greenlet==1.1.2
+greenlet==3.0.3
 idna==3.3
 importlib-metadata==6.8.0
 itsdangerous==2.0.1
